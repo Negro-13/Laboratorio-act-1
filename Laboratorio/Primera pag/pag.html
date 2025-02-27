@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>
+        Pokemons fantasma
+    </title>
+</head>
+
+<body>
+    <h2 class ="text">
+        Pokemons Fantasmas
+    </h2>
+    <h3 class ="text">Primera generacion</h3>
+    <div class="conteiner">
+        <div>
+            <h4 class ="text">Gastly</h4>
+            <p class ="text">
+                <a class="text" href="https://www.pokemon.com/el/pokedex/gastly">Gastly</a> es un Pokémon de tipo Fantasma y Veneno, conocido por su forma gaseosa y flotante. Es un Pokémon
+                travieso que puede volverse intangible y desaparecer. Evoluciona a Haunter y tiene la capacidad de crear
+                niebla para confundir a sus enemigos.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img style="width: 180px;" src="./imgenes/gast1.png">
+            </center>
+        </div>
+    </div>
+    <br>
+    <div class="conteiner">
+        <div>
+            <h4 class ="text">Haunter</h4>
+            <p class ="text">
+                <a class="text" href="https://www.pokemon.com/el/pokedex/haunter">Hauter</a> es un Pokémon de tipo Fantasma y Veneno. Tiene una apariencia flotante y
+                sombría, con una forma etérea y dos grandes ojos brillantes. Es conocido por su habilidad para atravesar
+                paredes y causar miedo, además de poseer un toque venenoso. Es más poderoso que Gastly y evoluciona a
+                Gengar.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img style="width: 180px;" src={gast} onclick={shynyGast}>
+            </center>
+        </div>
+    </div>
+    <br>
+    <div class="conteiner">
+        <div>
+            <h4 class ="text">Gengar</h4>
+            <p class ="text">
+                <a class="text" href="https://www.pokemon.com/el/pokedex/gengar">Gengar</a> tiene una apariencia macabra,con un cuerpo oscuro, ojos rojos y una sonrisa siniestra. Es muy rápido y
+                astuto, capaz de volverse
+                invisible y manipular sombras. Es conocido por su poder para asustar y envenenar a sus oponentes, y se
+                considera uno de los Pokémon más temidos de su tipo.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img style="width: 180px;" src="./imgenes/gengar1.png">
+            </center>
+            <center>
+                <button>Mega</button>
+            <button>Gmax</button>
+            </center>
+        </div>
+    </div>
+    <script>
+        import {useState} from "react"
+
+        function App() {
+
+        const shinyGa = "/imgenes/gast2.png";
+        const normGa = "/imgenes/gast1.png";
+        const [gast, setGast] = useState(normGa)
+
+        const shynyGast = () => {
+            if (gast == normGa){
+                setGast(shinyGa)
+            }else{
+                setGast(normGa)
+            }
+        }
+        }
+    </script>
+</body>
+
+</html>
