@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/fantasma.css">
+    <title>
+        Pokemons fantasma
+    </title>
+</head>
+
+<body>
+    <h2>Tipos Pokemons</h2>
+    <li><a href="fantasmas.html" class="hipervinculo">Fantasma</a></li>
+    <li><a href="agua.html" class="hipervinculo">Agua</a></li>
+    <h2 class="text">
+        Pokemons Fantasmas
+    </h2>
+    <div class="conteiner">
+        <div>
+            <h4 class="text">Gastly</h4>
+            <p class="text">
+                <a class="hipervinculo" href="https://www.pokemon.com/el/pokedex/gastly">Gastly</a> es un Pokémon de
+                tipo
+                Fantasma y Veneno, conocido por su forma gaseosa y flotante. Es un Pokémon
+                travieso que puede volverse intangible y desaparecer. Evoluciona a Haunter y tiene la capacidad de crear
+                niebla para confundir a sus enemigos. Este evoluciona al nivel 25 en Haunter.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img id="gastly" style="width: 180px;" height="180px" src="./imgenes/fantasma/gast1.png">
+            </center>
+            <center>
+                <button onclick="gastshiny()">shiny</button>
+            </center>
+            <br>
+        </div>
+
+    </div>
+    <br>
+    <div class="conteiner">
+        <div>
+            <h4 class="text">Haunter</h4>
+            <p class="text">
+                <a class="hipervinculo" href="https://www.pokemon.com/el/pokedex/haunter">Hauter</a> es un Pokémon de
+                tipo
+                Fantasma y Veneno. Tiene una apariencia flotante y
+                sombría, con una forma etérea y dos grandes ojos brillantes. Es conocido por su habilidad para atravesar
+                paredes y causar miedo, además de poseer un toque venenoso. Es más poderoso que Gastly y evoluciona a
+                Gengar por medio de intercambio o con <a class="hipervinculo"
+                    href="https://www.wikidex.net/wiki/Cord%C3%B3n_uni%C3%B3n">cordon union</a>.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img id="haunter" style="width: 180px;" height="180px" src="./imgenes/fantasma/haunter1.png">
+            </center>
+            <center>
+                <button onclick="shinyHaunter()">shiny</button>
+            </center>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div class="conteiner">
+        <div>
+            <h4 class="text">Gengar</h4>
+            <p class="text">
+                <a class="hipervinculo" href="https://www.pokemon.com/el/pokedex/gengar">Gengar</a> es de tipo Fantasma y Veneno, tiene una apariencia
+                macabra,con un cuerpo oscuro, ojos rojos y una sonrisa siniestra. Es muy rápido y
+                astuto, capaz de volverse
+                invisible y manipular sombras. Es conocido por su poder para asustar y envenenar a sus oponentes, y se
+                considera uno de los Pokémon más temidos de su tipo.
+            </p>
+        </div>
+        <div>
+            <br>
+            <center>
+                <img id="gengar" style="width: 180px;" height="180px" src="./imgenes/fantasma/gengar1.png">
+            </center>
+            <center>
+                <button onclick="shinyGengar()">shiny</button>
+                <button onclick="megaevo()">Mega</button>
+                <button onclick="gmax()">Gmax</button>
+            </center>
+            <br>
+        </div>
+    </div>
+    <script>
+        const gastl = document.getElementById('gastly')
+        const gastshiny = () => {
+            if (gastl.getAttribute('src') === './imgenes/fantasma/gast1.png') {
+                gastl.src = './imgenes/fantasma/gast2.png'
+            } else {
+                gastl.src = './imgenes/fantasma/gast1.png'
+            }
+        }
+
+        const haunter = document.getElementById('haunter')
+        const shinyHaunter = () => {
+            if (haunter.getAttribute('src') === './imgenes/fantasma/haunter1.png') {
+                haunter.src = './imgenes/fantasma/haunter2.png'
+            } else {
+                haunter.src = './imgenes/fantasma/haunter1.png'
+            }
+        }
+
+        const gengar = document.getElementById('gengar');
+        const shinyGengar = () => {
+            if (gengar.getAttribute('src') === './imgenes/fantasma/gengar1.png') {
+                gengar.src = './imgenes/fantasma/gengar2.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/megagen1.png') {
+                gengar.src = './imgenes/fantasma/megagen2.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/megagen2.png') {
+                gengar.src = './imgenes/fantasma/megagen1.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/gmaxgen1.png') {
+                gengar.src = './imgenes/fantasma/gmaxgen2.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/gmaxgen2.png') {
+                gengar.src = './imgenes/fantasma/gmaxgen1.png'
+            } else {
+                gengar.src = './imgenes/fantasma/gengar1.png'
+            }
+        }
+
+        const megaevo = () => {
+            if (gengar.getAttribute('src') === './imgenes/fantasma/gengar1.png' || gengar.getAttribute('src') === './imgenes/fantasma/gmaxgen1.png') {
+                gengar.src = './imgenes/fantasma/megagen1.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/gengar2.png' || gengar.getAttribute('src') === './imgenes/fantasma/gmaxgen2.png') {
+                gengar.src = './imgenes/fantasma/megagen2.png'
+            } else {
+                gengar.src = './imgenes/fantasma/gengar1.png'
+            }
+        }
+
+        const gmax = () => {
+            if (gengar.getAttribute('src') === './imgenes/fantasma/gengar1.png' || gengar.getAttribute('src') === './imgenes/fantasma/megagen1.png') {
+                gengar.src = './imgenes/fantasma/gmaxgen1.png'
+            } else if (gengar.getAttribute('src') === './imgenes/fantasma/gengar2.png' || gengar.getAttribute('src') === './imgenes/fantasma/megagen2.png') {
+                gengar.src = './imgenes/fantasma/gmaxgen2.png'
+            } else {
+                gengar.src = './imgenes/fantasma/gengar1.png'
+            }
+        }
+    </script>
+</body>
+
+</html>
